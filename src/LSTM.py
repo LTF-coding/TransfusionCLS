@@ -11,7 +11,6 @@ class LSTM(nn.Module):
 
     
     def forward(self, x):
-        # 初始化隐藏状态和细胞状态
         h0 = torch.zeros(self.lstm.num_layers, self.data_len, self.lstm.hidden_size)
         c0 = torch.zeros(self.lstm.num_layers, self.data_len, self.lstm.hidden_size)
         out, _ = self.lstm(x, (h0, c0))
