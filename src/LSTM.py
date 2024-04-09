@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 
-# 定义LSTM模型
 class LSTM(nn.Module):
     def __init__(self, input_size, hidden_size, num_layers, num_classes, data_len):
         super(LSTM, self).__init__()
